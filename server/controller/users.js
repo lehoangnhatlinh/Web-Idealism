@@ -56,6 +56,8 @@ class User {
           address,
           phone,
         });
+        console.log(newUser);
+      
         let save = await newUser.save();
         if (save) {
           return res.json({ success: "User created successfully" });
@@ -76,6 +78,8 @@ class User {
         phoneNumber: phoneNumber,
         updatedAt: Date.now(),
       });
+
+      console.log(currentUser)
       currentUser.exec((err, result) => {
         if (err) console.log(err);
         return res.json({ success: "User updated successfully" });

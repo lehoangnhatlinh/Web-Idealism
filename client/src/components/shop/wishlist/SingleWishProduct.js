@@ -72,13 +72,13 @@ const Product = () => {
                     {product.pPrice}
                   </div>
                   {product.pQuantity > 0 ? (
-                    <div className="text-green-500 my-1 md:my-0">In Stock</div>
+                    <div className="text-black-600 my-1 md:my-0">In Stock</div>
                   ) : (
                     <div className="text-red-500 my-1 md:my-0">Out Stock</div>
                   )}
 
                   <div
-                    style={{ background: "#303031" }}
+                    style={{ background: "#28A745" }}
                     onClick={(e) => history.push(`/products/${product._id}`)}
                     className="inline-block px-4 py-2 text-white text-xs md:text-base text-center cursor-pointer hover:opacity-75"
                   >

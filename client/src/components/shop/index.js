@@ -14,6 +14,7 @@ import CheckoutPage from "./order/CheckoutPage";
 import ContactUs from "./contactUs";
 import custom from "./custom";
 
+
 export {
   Home,
   Product,
@@ -31,5 +32,5 @@ export {
   ProductByCategory,
   CheckoutPage,
   ContactUs,
-  custom
+  custom, 
 };

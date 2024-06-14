@@ -19,7 +19,7 @@ const Menu = () => {
         <div
           onClick={(e) => dispatch({ type: "menu", payload: true })}
           className={`${
-            data.menu ? "border-b-2 border-yellow-700" : ""
+            data.menu ? "border-b-2 border-success" : ""
           } px-4 py-3 cursor-pointer`}
         >
           Description
@@ -27,11 +27,11 @@ const Menu = () => {
         <div
           onClick={(e) => dispatch({ type: "menu", payload: false })}
           className={`${
-            !data.menu ? "border-b-2 border-yellow-700" : ""
+            !data.menu ? "border-b-2 border-success" : ""
           } px-4 py-3 relative flex cursor-pointer`}
         >
           <span>Reviews</span>
-          <span className="absolute text-xs top-0 right-0 mt-2 bg-yellow-700 text-white rounded px-1">
+          <span className="absolute text-xs top-0 right-0 mt-2 bg-dark text-white rounded px-1">
             {layoutData.singleProductDetail.pRatingsReviews.length}
           </span>
         </div>

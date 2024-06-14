@@ -174,14 +174,14 @@ const ProductDetailsSection = (props) => {
             <div className="flex flex-col leading-8">
               <div className="text-2xl tracking-wider">{sProduct.pName}</div>
               <div className="flex justify-between items-center">
-                <span className="text-xl tracking-wider text-yellow-700">
+                <span className="text-xl tracking-wider text-danger fw-bolder">
                   {sProduct.pPrice}₫
                 </span>
                 <span>
                   <svg
                     onClick={(e) => isWishReq(e, sProduct._id, setWlist)}
                     className={`${isWish(sProduct._id, wList) && "hidden"
-                      } w-5 h-5 md:w-6 md:h-6 cursor-pointer text-yellow-700`}
+                      } w-5 h-5 md:w-6 md:h-6 cursor-pointer text-success`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -197,7 +197,7 @@ const ProductDetailsSection = (props) => {
                   <svg
                     onClick={(e) => unWishReq(e, sProduct._id, setWlist)}
                     className={`${!isWish(sProduct._id, wList) && "hidden"
-                      } w-5 h-5 md:w-6 md:h-6 cursor-pointer text-yellow-700`}
+                      } w-5 h-5 md:w-6 md:h-6 cursor-pointer text-success`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +225,7 @@ const ProductDetailsSection = (props) => {
                   }`}
               >
                 <div
-                  className={`${quantitiy === sProduct.pQuantity && "text-red-500"
+                  className={`${quantitiy === sProduct.pQuantity && "text-gray-700"
                     }`}
                 >
                   Quantity
@@ -362,7 +362,7 @@ const ProductDetailsSection = (props) => {
                   {layoutData.inCart !== null &&
                     layoutData.inCart.includes(sProduct._id) === true ? (
                     <div
-                      style={{ background: "#303031" }}
+                      style={{ background: "#28A745" }}
                       className={`px-4 py-2 text-white text-center cursor-not-allowed uppercase opacity-75`}
                     >
                       In cart
@@ -381,7 +381,7 @@ const ProductDetailsSection = (props) => {
                           totalCost
                         )
                       }
-                      style={{ background: "#303031" }}
+                      style={{ background: "#28A745" }}
                       className={`px-4 py-2 text-white text-center cursor-pointer uppercase`}
                     >
                       Add to cart

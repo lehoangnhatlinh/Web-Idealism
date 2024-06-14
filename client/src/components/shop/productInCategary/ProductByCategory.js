@@ -12,14 +12,15 @@ const Submenu = ({ category }) => {
       {/* Submenu Section */}
       <section className="mx-4 mt-24 md:mx-12 md:mt-32 lg:mt-24">
         <div className="flex justify-between items-center">
-          <div className="text-sm flex space-x-3 mt-4">
+          <div className="text-sm flex mt-4">
             <span
-              className="hover:text-yellow-700 cursor-pointer"
+              className="hover:text-success cursor-pointer"
               onClick={(e) => history.push("/productInCatogory")}
             >
               Shop 
             </span>
-            <span className="text-yellow-700 cursor-default">{category}</span>
+            <span className="mx-1"> &gt;&gt; </span>
+            <span className="text-green-600 cursor-default">{category}</span>
           </div>
           <div>
             <svg
@@ -70,7 +71,7 @@ const AllProduct = ({ products }) => {
                     <div className="flex items-center space-x-1">
                       <span>
                         <svg
-                          className="w-4 h-4 fill-current text-yellow-700"
+                          className="w-4 h-4 fill-current text-warning"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -89,10 +90,10 @@ const AllProduct = ({ products }) => {
                       </span>
                     </div>
                   </div>
-                  <div>{item.pPrice}VND</div>
+                  <div className="text-danger fw-bolder">{item.pPrice}₫</div>
                   <div className="absolute top-0 right-0 mx-2 my-2 md:mx-4">
                     <svg
-                      className="w-5 h-5 md:w-6 md:h-6 cursor-pointer text-yellow-700"
+                      className="w-5 h-5 md:w-6 md:h-6 cursor-pointer text-success"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

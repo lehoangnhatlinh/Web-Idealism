@@ -110,6 +110,7 @@ class Auth {
     }
     try {
       const data = await userModel.findOne({ email: email });
+      console.log(data)
       if (!data) {
         return res.json({
           error: "Invalid email or password",
@@ -122,6 +123,7 @@ class Auth {
             JWT_SECRET
           );
           const encode = jwt.verify(token, JWT_SECRET);
+          console.log(token)
           return res.json({
             token: token,
             user: encode,

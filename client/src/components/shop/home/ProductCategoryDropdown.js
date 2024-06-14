@@ -30,7 +30,7 @@ const CategoryList = () => {
   return (
     <div className={`${data.categoryListDropdown ? "" : "hidden"} my-4`}>
       
-      <div className="py-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
+      <div className="py-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {categories && categories.length > 0 ? (
           categories.map((item, index) => {
             return (
@@ -39,7 +39,7 @@ const CategoryList = () => {
                   onClick={(e) =>
                     history.push(`/products/category/${item._id}`)
                   }
-                  className="col-span-1 m-3 flex flex-col items-center justify-center space-y-4 cursor-pointer shadow-lg rounded-xl h-100"
+                  className="col-span-1 mx-3 my-3 flex flex-col items-center justify-center space-y-4 cursor-pointer shadow h-100 transform transition duration-300 hover:shadow-lg hover:scale-110"
                 >
                   <img
                   className="fix-image-categories object-center cursor-pointer  rounded-top"
@@ -110,7 +110,7 @@ const FilterList = () => {
           <div className="flex flex-col space-y-2  w-2/3 lg:w-2/4">
             <label htmlFor="points" className="text-sm">
               Price (between 0 and 200.000₫):{" "}
-              <span className="font-semibold text-success-700">{range}₫</span>{" "}
+              <span className="font-semibold text-success">{range}₫</span>{" "}
             </label>
             <input
               value={range}

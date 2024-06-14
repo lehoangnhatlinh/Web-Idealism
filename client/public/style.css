@@ -7639,7 +7639,7 @@ video {
 }
 .fix-image-categories{
   width: 100%;
-  height: auto;
+  height: 185px;
   object-fit: fill;
 }
 .fix-image-detail{

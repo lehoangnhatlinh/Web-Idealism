@@ -17,6 +17,7 @@ import { DashboardAdmin, Categories, Products, Orders } from "./admin";
 import { UserProfile, UserOrders, SettingUser } from "./shop/dashboardUser";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {SuccessPage,CancelPage} from "./shop";
 
 /* Routing All page will be here */
 const Routes = (props) => {
@@ -38,6 +39,11 @@ const Routes = (props) => {
         <CartProtectedRoute
           exact={true}
           path="/checkout"
+          component={CheckoutPage}
+        />
+        <CartProtectedRoute
+          exact={true}
+          path="/create-payment-link"
           component={CheckoutPage}
         />
         {/* Shop & Public Routes End */}

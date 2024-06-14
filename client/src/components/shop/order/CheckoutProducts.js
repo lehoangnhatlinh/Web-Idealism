@@ -16,6 +16,7 @@ export const CheckoutComponent = (props) => {
   const { data, dispatch } = useContext(LayoutContext);
 
   const [state, setState] = useState({
+    name: "",
     address: "",
     phone: "",
     error: false,
@@ -54,8 +55,8 @@ export const CheckoutComponent = (props) => {
   }
   return (
     <Fragment>
-      <section className="m-26  border rounded shadow-lg">
-        <div className="text-2xl mx-2">Order</div>
+      <section className="mx-4 mt-20 md:mx-12 md:mt-32 lg:mt-24">
+        <div className="text-2xl mx-5 mt-40 ">Order</div>
         {/* Product List */}
         <div className="flex flex-col md:flex md:space-x-2 md:flex-row">
           <div className="md:w-1/2">
@@ -75,6 +76,25 @@ export const CheckoutComponent = (props) => {
                   ) : (
                     ""
                   )}
+                  <div className="flex flex-col py-2">
+                    <label htmlFor="address" className="pb-2">
+                      Name
+                    </label>
+                    <input
+                      value={state.name}
+                      onChange={(e) =>
+                        setState({
+                          ...state,
+                          name: e.target.value,
+                          error: false,
+                        })
+                      }
+                      type="text"
+                      id="name"
+                      className="border px-4 py-2"
+                      placeholder="Name..."
+                    />
+                  </div>
                   <div className="flex flex-col py-2">
                     <label htmlFor="address" className="pb-2">
                       Dalivery Address
@@ -107,7 +127,7 @@ export const CheckoutComponent = (props) => {
                           error: false,
                         })
                       }
-                      type="number"
+                      type="text"
                       id="phone"
                       className="border px-4 py-2"
                       placeholder="+880"
@@ -135,7 +155,7 @@ export const CheckoutComponent = (props) => {
                       )
                     }
                     className="w-full px-4 py-2 text-center text-white font-semibold cursor-pointer"
-                    style={{ background: "#303031" }}
+                    style={{ background: "#28A745" }}
                   >
                     Pay now
                   </div>
@@ -187,10 +207,10 @@ const CheckoutProducts = ({ products }) => {
                     alt="wishListproduct"
                   />
                   <div className="text-lg md:ml-6 truncate">
-                    {product.pName.slice(0, 30) + "..."}
+                    {product.pName}
                   </div>
                   <div className="md:ml-6 font-semibold text-gray-600 text-sm">
-                    Price :  {product.pPrice}₫{" "}
+                    Price : {product.pPrice}₫
                   </div>
                   <div className="md:ml-6 font-semibold text-gray-600 text-sm">
                     Quantitiy : {quantity(product._id)}

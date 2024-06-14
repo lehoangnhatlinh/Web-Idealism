@@ -72,7 +72,7 @@ const Navber = (props) => {
 
           <div className="flex items-right col-span-2 lg:col-span-1 flex justify-end">
             {/*  WishList Page Button */}
-            {/* <div
+            <div
               onClick={(e) => history.push("/wish-list")}
               className="hover:bg-gray-200 rounded-lg px-2 py-2 cursor-pointer"
               title="Wishlist"
@@ -95,7 +95,7 @@ const Navber = (props) => {
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                 />
               </svg>
-            </div> */}
+            </div>
             {localStorage.getItem("jwt") ? (
               <Fragment>
                 <div
@@ -164,7 +164,7 @@ const Navber = (props) => {
                             </span>
                             <span>My Account</span>
                           </span>
-                          <span
+                          {/* <span
                             onClick={(e) => history.push("/wish-list")}
                             className="flex space-x-2 py-2 px-8 hover:bg-gray-400 cursor-pointer"
                           >
@@ -185,8 +185,8 @@ const Navber = (props) => {
                               </svg>
                             </span>
                             <span>My Wishlist</span>
-                          </span>
-                          <span
+                          </span> */}
+                          {/* <span
                             onClick={(e) => history.push("/user/setting")}
                             className="flex space-x-1 py-2 px-8 hover:bg-gray-400 cursor-pointer"
                           >
@@ -213,7 +213,7 @@ const Navber = (props) => {
                               </svg>
                             </span>
                             <span>Setting</span>
-                          </span>
+                          </span> */}
                           <span
                             onClick={(e) => logout()}
                             className="flex space-x-2 py-2 px-8 hover:bg-gray-400 cursor-pointer"

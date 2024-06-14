@@ -68,7 +68,7 @@ const CartModal = () => {
         } fixed z-40 inset-0 flex items-start justify-end`}
       >
         <div
-          style={{ background: "#303031" }}
+          style={{ background: "#303031", opacity: 0.8 }}
           className="w-full md:w-5/12 lg:w-4/12 h-full flex flex-col justify-between"
         >
           <div className="overflow-y-auto">
@@ -165,17 +165,18 @@ const CartModal = () => {
             >
               Continue shopping
             </div>
+            
             {data.cartTotalCost ? (
               <Fragment>
                 {isAuthenticate() ? (
                   <div
-                    className="px-4 py-2 bg-black text-white text-center cursor-pointer"
+                    className="px-4 py-2 bg-success text-white text-center cursor-pointer"
                     onClick={(e) => {
                       history.push("/checkout");
                       cartModalOpen();
                     }}
                   >
-                    Checkout {data.cartTotalCost}₫
+                    Checkout
                   </div>
                 ) : (
                   <div

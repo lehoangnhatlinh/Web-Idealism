@@ -13,7 +13,7 @@ const Sidebar = (props) => {
     <Fragment>
       <div className="flex flex-col w-full space-y-4 md:w-3/12 font-medium">
         <div
-          style={{ background: "#303031" }}
+          style={{ background: "#28A745" }}
           className="flex items-center space-x-2 rounded shadow p-2 text-gray-100"
         >
           <svg
@@ -42,7 +42,7 @@ const Sidebar = (props) => {
             onClick={(e) => history.push("/user/orders")}
             className={`${
               location.pathname === "/user/orders"
-                ? "border-r-4 border-yellow-700 bg-gray-200"
+                ? "border-r-4 border-success bg-gray-200"
                 : ""
             }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
@@ -53,36 +53,36 @@ const Sidebar = (props) => {
             onClick={(e) => history.push("/user/profile")}
             className={`${
               location.pathname === "/user/profile"
-                ? "border-r-4 border-yellow-700 bg-gray-200"
+                ? "border-r-4 border-success bg-gray-200"
                 : ""
             }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
             My Accounts
           </div>
           <hr />
-          <div
+          {/* <div
             onClick={(e) => history.push("/wish-list")}
             className={` px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
             My Wishlist
-          </div>
+          </div> */}
           <hr />
           <div
             onClick={(e) => history.push("/user/setting")}
             className={`${
               location.pathname === "/user/setting"
-                ? "border-r-4 border-yellow-700 bg-gray-200"
+                ? "border-r-4 border-success bg-gray-200"
                 : ""
             }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
-            Setting
+            Change Password
           </div>
           <hr />
           <div
             onClick={(e) => logout()}
             className={`${
               location.pathname === "/admin/dashboard/categories"
-                ? "border-r-4 border-yellow-700 bg-gray-200"
+                ? "border-r-4 border-success bg-gray-200"
                 : ""
             }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >

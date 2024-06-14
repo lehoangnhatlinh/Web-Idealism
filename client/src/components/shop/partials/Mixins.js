@@ -28,3 +28,12 @@ export const totalCost = () => {
   });
   return totalCost;
 };
+
+export const calculateTotalCost = (cartProducts) => {
+  return cartProducts.reduce((total, product) => {
+    return total +  product.pPrice * quantity(product._id);
+  }, 0);
+};
+
+
+

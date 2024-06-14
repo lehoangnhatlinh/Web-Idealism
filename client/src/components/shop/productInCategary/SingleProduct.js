@@ -80,7 +80,7 @@ const SingleProduct = (props) => {
                     <div className="flex items-center space-x-1">
                       <span>
                         <svg
-                          className="w-4 h-4 fill-current text-yellow-700"
+                          className="w-4 h-4 fill-current text-warning"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -99,13 +99,13 @@ const SingleProduct = (props) => {
                       </span>
                     </div>
                   </div>
-                  <div>{item.pPrice}₫</div>
+                  <div className="text-danger fw-bolder">{item.pPrice}₫</div>
                   {/* WhisList Logic  */}
                   <div className="absolute top-0 right-0 mx-2 my-2 md:mx-4">
                     <svg
                       onClick={(e) => isWishReq(e, item._id, setWlist)}
                       className={`${isWish(item._id, wList) && "hidden"
-                        } w-5 h-5 md:w-6 md:h-6 cursor-pointer text-yellow-700 transition-all duration-300 ease-in`}
+                        } w-5 h-5 md:w-6 md:h-6 cursor-pointer text-success transition-all duration-300 ease-in`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -121,7 +121,7 @@ const SingleProduct = (props) => {
                     <svg
                       onClick={(e) => unWishReq(e, item._id, setWlist)}
                       className={`${!isWish(item._id, wList) && "hidden"
-                        } w-5 h-5 md:w-6 md:h-6 cursor-pointer text-yellow-700 transition-all duration-300 ease-in`}
+                        } w-5 h-5 md:w-6 md:h-6 cursor-pointer text-success transition-all duration-300 ease-in`}
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"

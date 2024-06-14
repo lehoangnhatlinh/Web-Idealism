@@ -122,7 +122,7 @@ const OrdersComponent = () => {
     <Fragment>
       <div className="flex flex-col w-full my-4 md:my-0 md:w-9/12 md:px-8">
         <div className="border">
-          <div className="py-4 px-4 text-lg font-semibold border-t-2 border-yellow-700">
+          <div className="py-4 px-4 text-lg font-semibold border-t-2 border-success">
             Orders
           </div>
           <hr />

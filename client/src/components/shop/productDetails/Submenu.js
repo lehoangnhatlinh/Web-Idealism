@@ -9,20 +9,22 @@ const Submenu = (props) => {
       {/* Submenu Section */}
       <section className="mx-4 mt-24 md:mx-12 md:mt-32 lg:mt-24">
         <div className="flex justify-between items-center">
-          <div className="text-sm flex space-x-2 mt-4">
+          <div className="text-sm flex items-center mt-4">
             <span
-              className="hover:text-yellow-700 cursor-pointer"
-              onClick={(e) => history.push("/productInCatogory")}
+              className="hover:text-success cursor-pointer"
+              onClick={() => history.push("/productInCatogory")}
             >
-              Shop 
+              Shop
             </span>
+            <span className="mx-1"> &gt;&gt; </span>
             <span
-              className="hover:text-yellow-700 cursor-pointer"
-              onClick={(e) => history.push(`/products/category/${categoryId}`)}
+              className="hover:text-success cursor-pointer"
+              onClick={() => history.push(`/products/category/${categoryId}`)}
             >
               {category}
             </span>
-            <span className="text-yellow-700 cursor-default">{product}</span>
+            <span className="mx-1"> &gt;&gt; </span>
+            <span className="text-green-600 cursor-default">{product}</span>
           </div>
           <div>
             <svg

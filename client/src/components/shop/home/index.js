@@ -3,8 +3,6 @@ import Layout from "../layout";
 import Slider from "./Slider";
 import ProductCategory from "./ProductCategory";
 import { homeState, homeReducer } from "./HomeContext";
-import SingleProduct from "./SingleProduct";
-// import FollowONIG from "./FollowMe";
 
 export const HomeContext = createContext();
 
@@ -79,7 +77,7 @@ const HomeComponent = () => {
 
       <section className="">
         <div className="ingMainParent mb-[130px] mt-[30px]">
-          <h3 className="text-4xl font-medium text-center mb-16'">OUR INGRIDENTS</h3>
+          <h3 className="text-4xl font-medium text-center mt-16 mb-16'">OUR INGRIDENTS</h3>
 
           <div className='ingImgHold flex flex-row gap-32 justify-center'>
                 <img src="./image/ing1.png" className="zoom2" />

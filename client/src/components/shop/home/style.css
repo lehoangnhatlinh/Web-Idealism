@@ -45,7 +45,7 @@
 }
 .fix-image-slide{
   width:100%;
-  height: 680px;
+  height:680px;
   object-fit: fill;
 }
 
@@ -71,4 +71,17 @@
 }
 
 .select-curtom{
+}
+
+.btnBuy {
+  margin-top: 420px;
+  margin-right: 70%;
+}
+.btnBuy>a {
+  font-weight: bolder;
+}
+
+.btnBuy>a:hover{
+  text-decoration: none;
+  font-weight: bold;
 }
