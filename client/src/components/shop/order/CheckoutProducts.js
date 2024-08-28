@@ -291,7 +291,7 @@ export const CheckoutComponent = (props) => {
   return (
     <Fragment>
       <section className="mx-4 mt-25 md:mx-12 md:mt-32 lg:mt-24">
-        <div className="text-2xl mx-2">Order</div>
+        <div className="text-2xl mx-2 ">Order</div>
         {/* Product List */}
         <div className="flex flex-col md:flex md:space-x-2 md:flex-row">
           <div className="md:w-1/2">
@@ -394,7 +394,7 @@ export const CheckoutComponent = (props) => {
                       )
                     }
                     className="w-full px-4 py-2 text-center text-white font-semibold cursor-pointer"
-                    style={{ background: "#303031" }}
+                    style={{ background: "#28A745" }}
                   >
                     Pay now
                   </div>
@@ -466,7 +466,7 @@ const CheckoutProducts = ({ products }) => {
         )}
       </div>
       <img src="/image/QR.png" alt="Product" style={{width: '25%', margin: "auto"}}/>
-      <i style={{marginLeft: "30%"}}>Scan QR, Enter address, phone = submit</i>  
+      <i style={{marginLeft: "30%"}}>Scan QR, Please enter name and phone</i>  
 
     </Fragment>
   );
